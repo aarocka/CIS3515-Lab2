@@ -39,7 +39,6 @@ public class FormActivity extends AppCompatActivity {
                         passwordField2.getText().toString().matches("")
                 ){
                     Context context = getApplicationContext();
-
                     CharSequence text = "Ensure all required forms are filled";
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, text, duration);
@@ -47,9 +46,17 @@ public class FormActivity extends AppCompatActivity {
                 } else {//forms must be filled to get to this block of code
                     //check if password and password2 match
                     if (passwordField.getText().toString().matches(passwordField2.getText().toString())) {
-
+                        Context context = getApplicationContext();
+                        CharSequence text = "Thanks for signing up "+nameField.getText().toString()+"!^_^";
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
                     }else {//runs if the password fields mismatch
-
+                        Context context = getApplicationContext();
+                        CharSequence text = "Make sure passwords match";
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
                     }
                 }
 
